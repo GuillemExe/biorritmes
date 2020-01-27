@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', 'CalculBio@index');
+
+Route::get('/add', 'CalculBio@create');
+
+/* Venia de base esta route */
+
+/* Route::get('/', function () {
     return view('welcome');
-});
+}); */

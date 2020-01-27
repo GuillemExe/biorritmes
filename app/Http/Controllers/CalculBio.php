@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Usuario;
 
 class CalculBio extends Controller
 {
@@ -14,6 +15,7 @@ class CalculBio extends Controller
     public function index()
     {
         //
+        return view('bio.bioIndex');
     }
 
     /**

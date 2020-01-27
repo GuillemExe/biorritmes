@@ -4,17 +4,15 @@
 
 
 @section('header')
-<h1>BLADE FORM</h1>
+@include('template.header')
 @endsection
 
 
 @section('content')
-<h3>Esto es un footer</h3>
+<h3>Esto es un content</h3>
 @endsection
 
 
 @section('footer')
-
-<h3>Esto es un footer</h3>
-
+@include('template.footer')
 @endsection
