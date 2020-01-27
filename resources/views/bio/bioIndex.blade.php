@@ -1,7 +1,5 @@
 @extends('master.master')
 
-@section('pageTitle','Pàgina Index')
-
 
 @section('header')
 @include('template.header')
