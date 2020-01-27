@@ -15,7 +15,7 @@ class CalculBio extends Controller
     public function index()
     {
         //
-        return view('bio.bioIndex');
+        return view('bio.bioResult');
     }
 
     /**
