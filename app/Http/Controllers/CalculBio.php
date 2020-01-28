@@ -14,8 +14,7 @@ class CalculBio extends Controller
      */
     public function index()
     {
-        //
-        return view('bio.bioResult');
+        return view('bio.bioIndex');
     }
 
     /**
@@ -36,7 +35,12 @@ class CalculBio extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $usuario = new Usuario();
+
+        $usuario->setNombre($request->input('nombreIntroducido'));
+        $usuario->setFecha_de_nacimiento($request->input('nombrfechaIntroducida'));
+
+        $usuario = $request->session()->get('usuario');
     }
 
     /**

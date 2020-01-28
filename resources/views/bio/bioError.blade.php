@@ -1,5 +1,6 @@
 @extends('master.master')
 
+@section('pageTitle','Pagina de error')
 
 @section('header')
 @include('template.header')

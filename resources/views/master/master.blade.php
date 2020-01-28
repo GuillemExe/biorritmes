@@ -14,9 +14,7 @@
         <!-- Font family Open Sans - Google fonts -->
         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
 
-        {{-- <title>@yield('pageTitle')</title> --}}
-        
-        
+        <title>@yield('pageTitle')</title>
     </head>
 
     <body>

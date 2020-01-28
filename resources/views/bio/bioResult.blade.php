@@ -1,5 +1,6 @@
 @extends('master.master')
 
+@section('pageTitle','Pagina resultado')
 
 @section('header')
 @include('template.header')

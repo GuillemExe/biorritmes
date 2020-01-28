@@ -1,5 +1,6 @@
 @extends('master.master')
 
+@section('pageTitle','Pagina formulario')
 
 @section('header')
 @include('template.header')
