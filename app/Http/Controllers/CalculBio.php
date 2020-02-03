@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Usuario;
+use \Datetime;
+
 
 class CalculBio extends Controller
 {
@@ -42,12 +44,25 @@ class CalculBio extends Controller
      */
     public function store(Request $request)
     {
-        $usuario = new Usuario();
+        try {
+            $nombre = $request->input('name');
+            $dataNeixement = new Datetime($request->input('birthdate'));
+            $sysdate = new Datetime(date('d/m/Y'));
 
-        $usuario->setNombre($request->input('nombreIntroducido'));
-        $usuario->setFecha_de_nacimiento($request->input('nombrfechaIntroducida'));
+            $diff = $dataNeixement->diff($sysdate);
+            $dies = $diff->days;
 
-        $usuario = $request->session()->get('usuario');
+            if ($dataNeixement > $sysdate) {
+                return view('index',['nom'=>'Index per tonto']);
+            }
+
+            return view('bio.bioResult',['nomUsuari'=>$nombre, 'dataNeixement'=>$dataNacimiento, 'dies'=>$dies, 
+            'progresFis'=>(($dies % 23) / 23) * 100, 'progresEmo'=>(($dies % 28) / 28) * 100, 'progresInt'=>(($dies % 33) / 33) * 100]);
+
+        } catch (\Exception $e) {
+            
+            return view('bio.bioError');
+        }
     }
 
     /**
