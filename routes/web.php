@@ -20,7 +20,6 @@ Route::get('/add', 'CalculBio@create');
 // STORE
 Route::post('/store', 'CalculBio@store');
 
-/* Venia de base esta route */
 
 /* Route::get('/', function () {
     return view('welcome');
