@@ -31,7 +31,7 @@ class CalculBio extends Controller
     public function create()
     {
         //
-        
+        return view('bio.bioForm');
     }
 
     /**

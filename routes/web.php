@@ -11,8 +11,10 @@
 |
 */
 
+// INDEX PAGE
 Route::get('/', 'CalculBio@index');
 
+// GENERATE NEW USER 
 Route::get('/add', 'CalculBio@create');
 
 /* Venia de base esta route */
