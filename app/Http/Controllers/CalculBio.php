@@ -14,7 +14,13 @@ class CalculBio extends Controller
      */
     public function index()
     {
-        return view('bio.bioIndex');
+        $customers = [
+            'Primer nombre',
+            'Segundo nombre',
+            'Tercer nombre'
+        ];
+
+        return view('bio.bioIndex', ['customers' => $customers]);
     }
 
     /**
@@ -25,6 +31,7 @@ class CalculBio extends Controller
     public function create()
     {
         //
+        
     }
 
     /**

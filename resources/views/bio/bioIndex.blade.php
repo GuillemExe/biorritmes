@@ -19,6 +19,9 @@
             33 días. Al momento de nacer, cada ciclo comienza desde cero y empieza a subir en
             una fase positiva, durante la cual las energías y las capacidades son altas.
         </p>
+        @foreach($customers as $customer)
+        <p>{{ $customer }}</p>
+        @endforeach
     </div>
 </div>
 @endsection
